@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5879/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style data-merge-styles="true"></style>
+
+<style data-merge-styles="true"></style><style data-merge-styles="true"></style>
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Lucas Tavares Brito">
+<meta name="dcterms.date" content="2025-01-31">
+
+<title>Dois Projetos em Ciência de Dados</title>
+<style class="anchorjs"></style><style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="./Dois Projetos em Ciência de Dados_files/clipboard.min.js.download"></script>
+<script src="./Dois Projetos em Ciência de Dados_files/quarto.js.download"></script>
+<script src="./Dois Projetos em Ciência de Dados_files/popper.min.js.download"></script>
+<script src="./Dois Projetos em Ciência de Dados_files/tippy.umd.min.js.download"></script>
+<script src="./Dois Projetos em Ciência de Dados_files/anchor.min.js.download"></script>
+<link href="./Dois Projetos em Ciência de Dados_files/tippy.css" rel="stylesheet">
+<link href="./Dois Projetos em Ciência de Dados_files/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="./Dois Projetos em Ciência de Dados_files/bootstrap.min.js.download"></script>
+<link href="./Dois Projetos em Ciência de Dados_files/bootstrap-icons.css" rel="stylesheet">
+<link href="./Dois Projetos em Ciência de Dados_files/bootstrap-8a79a254b8e706d3c925cde0a310d4f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+<style>.ansi-display{font-family:monospace;white-space:pre-wrap;--ansiBlack: #000000;--ansiRed: #cd3131;--ansiGreen: #00BC00;--ansiYellow: #949800;--ansiBlue: #0451a5;--ansiMagenta: #bc05bc;--ansiCyan: #0598bc;--ansiWhite: #555555;--ansiBrightBlack: #666666;--ansiBrightRed: #cd3131;--ansiBrightGreen: #14CE14;--ansiBrightYellow: #b5ba00;--ansiBrightBlue: #0451a5;--ansiBrightMagenta: #bc05bc;--ansiBrightCyan: #0598bc;--ansiBrightWhite: #a5a5a5}.dark-mode .ansi-display{--ansiBlack: #000000;--ansiRed: #cd3131;--ansiGreen: #0DBC79;--ansiYellow: #e5e510;--ansiBlue: #2472c8;--ansiMagenta: #bc3fbc;--ansiCyan: #11a8cd;--ansiWhite: #e5e5e5;--ansiBrightBlack: #666666;--ansiBrightRed: #f14c4c;--ansiBrightGreen: #23d18b;--ansiBrightYellow: #f5f543;--ansiBrightBlue: #3b8eea;--ansiBrightMagenta: #d670d6;--ansiBrightCyan: #29b8db;--ansiBrightWhite: #e5e5e5}@keyframes ansi-displaly-run-blink{50%{opacity:0}}.fui-FluentProvider h2{border-bottom:none;padding-bottom:0}</style><style data-make-styles-bucket="d" data-priority="0"></style><style id="fui-FluentProviderr0"></style></head>
+
+<body class="fullcontent quarto-light" data-tabster="{&quot;root&quot;:{}}">
+
+<i tabindex="0" role="none" data-tabster-dummy="" aria-hidden="true" style="position: fixed; height: 1px; width: 1px; opacity: 0.001; z-index: -1; content-visibility: hidden; top: 0px; left: 0px;"></i><header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Dois Projetos em Ciência de Dados</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Lucas Tavares Brito </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 31, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="introdução" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introdução</h1>
+<p>Nesse relatório, apresento dois scripts feitos por mim ao longo da duração do curso, descrevendo os procedimentos realizados em cada etapa. O primeiro analisa os dados da Pesquisa Nacional de Saúde de 2019 e apresenta resultados de uma regressão linear a partir deles. O segundo realiza uma análise de séries temporais com dados em painel sobre criminalidade e desemprego.</p>
+<p>O relatório foi inteiramente construído em Quarto, permitindo a execução de código em R e sintetizando tudo em um documento único.</p>
+</section>
+<section id="capital-social-e-saúde-uma-análise-a-partir-dos-dados-da-pesquisa-nacional-de-sáude-de-2019" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Capital Social e Saúde: uma análise a partir dos dados da Pesquisa Nacional de Sáude de 2019</h1>
+<section id="bibliotecas" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="bibliotecas"><span class="header-section-number">2.1</span> Bibliotecas<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#bibliotecas" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h2>
+<p>O script começa carregando diversos pacotes R necessários para manipulação de dados, regressão linear, testes estatísticos e visualização:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="http://localhost:5879/#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fastDummies)</span>
+<span id="cb1-2"><a href="http://localhost:5879/#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance)</span>
+<span id="cb1-3"><a href="http://localhost:5879/#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Carregando pacotes exigidos: carData</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="http://localhost:5879/#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jtools)</span>
+<span id="cb3-2"><a href="http://localhost:5879/#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmtest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Carregando pacotes exigidos: zoo</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Anexando pacote: 'zoo'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Os seguintes objetos são mascarados por 'package:base':
+
+    as.Date, as.Date.numeric</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="http://localhost:5879/#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     </code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+✖ dplyr::recode() masks car::recode()
+✖ purrr::some()   masks car::some()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="http://localhost:5879/#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-2"><a href="http://localhost:5879/#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Please cite as: 
+
+ Hlavac, Marek (2022). stargazer: Well-Formatted Regression and Summary Statistics Tables.
+ R package version 5.2.3. https://CRAN.R-project.org/package=stargazer </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="http://localhost:5879/#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AER)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Carregando pacotes exigidos: sandwich
+Carregando pacotes exigidos: survival</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="carregamento-e-tratamento-dos-dados" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="carregamento-e-tratamento-dos-dados"><span class="header-section-number">2.2</span> Carregamento e tratamento dos dados<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#carregamento-e-tratamento-dos-dados" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h2>
+<p>O script lê a base de dados da Pesquisa Nacional de Saúde (PNS) 2019:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="http://localhost:5879/#cb14-1" aria-hidden="true" tabindex="-1"></a>pns_2019 <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">"dados_pns/PNS_2019.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Depois, ele filtra os dados para incluir apenas respondentes do questionário individual:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="http://localhost:5879/#cb15-1" aria-hidden="true" tabindex="-1"></a>pns_2019_red <span class="ot">&lt;-</span> pns_2019[<span class="fu">which</span>(</span>
+<span id="cb15-2"><a href="http://localhost:5879/#cb15-2" aria-hidden="true" tabindex="-1"></a>  pns_2019<span class="sc">$</span>V0015 <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> pns_2019<span class="sc">$</span>M001 <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> pns_2019<span class="sc">$</span>M00203 <span class="sc">==</span> <span class="dv">1</span>), ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Em seguida, são selecionadas apenas as variáveis de interesse, e essas são devidamente renomeadas.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="http://localhost:5879/#cb16-1" aria-hidden="true" tabindex="-1"></a>pns_2019_red <span class="ot">&lt;-</span> pns_2019_red[, <span class="fu">c</span>(<span class="st">"V0001"</span>, <span class="st">"C006"</span>, <span class="st">"C008"</span>, <span class="st">"C009"</span>, <span class="st">"C011"</span>,</span>
+<span id="cb16-2"><a href="http://localhost:5879/#cb16-2" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">"M01401"</span>, <span class="st">"M01501"</span>, <span class="st">"M01701"</span>, <span class="st">"M01801"</span>, <span class="st">"M01901"</span>,</span>
+<span id="cb16-3"><a href="http://localhost:5879/#cb16-3" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">"VDD004A"</span>, <span class="st">"N00101"</span>, <span class="st">"VDF004"</span>,</span>
+<span id="cb16-4"><a href="http://localhost:5879/#cb16-4" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">"Q00201"</span>, <span class="st">"Q03001"</span>, <span class="st">"Q092"</span>, <span class="st">"N011"</span>,</span>
+<span id="cb16-5"><a href="http://localhost:5879/#cb16-5" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">"P027"</span>, <span class="st">"V0022"</span>, <span class="st">"A01001"</span>)]</span>
+<span id="cb16-6"><a href="http://localhost:5879/#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="http://localhost:5879/#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pns_2019_red) <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb16-8"><a href="http://localhost:5879/#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"UF"</span>,                     <span class="co"># V0001</span></span>
+<span id="cb16-9"><a href="http://localhost:5879/#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"sexo"</span>,                   <span class="co"># C006</span></span>
+<span id="cb16-10"><a href="http://localhost:5879/#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"idade"</span>,                  <span class="co"># C008</span></span>
+<span id="cb16-11"><a href="http://localhost:5879/#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"raca"</span>,                   <span class="co"># C009</span></span>
+<span id="cb16-12"><a href="http://localhost:5879/#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"estado_civil"</span>,           <span class="co"># C011 </span></span>
+<span id="cb16-13"><a href="http://localhost:5879/#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"familia"</span>,                <span class="co"># M01401 </span></span>
+<span id="cb16-14"><a href="http://localhost:5879/#cb16-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"amigos"</span>,                 <span class="co"># M01501 </span></span>
+<span id="cb16-15"><a href="http://localhost:5879/#cb16-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"atividade_civica"</span>,       <span class="co"># M01701 </span></span>
+<span id="cb16-16"><a href="http://localhost:5879/#cb16-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">"atividade_voluntaria"</span>,   <span class="co"># M01801 </span></span>
+<span id="cb16-17"><a href="http://localhost:5879/#cb16-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"atividade_religiosa"</span>,    <span class="co"># M01901 </span></span>
+<span id="cb16-18"><a href="http://localhost:5879/#cb16-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">"educacao"</span>,               <span class="co"># VDD004A</span></span>
+<span id="cb16-19"><a href="http://localhost:5879/#cb16-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"saude_subjetiva_geral"</span>,  <span class="co"># N00101 </span></span>
+<span id="cb16-20"><a href="http://localhost:5879/#cb16-20" aria-hidden="true" tabindex="-1"></a>  <span class="st">"faixas_rendapc"</span>,         <span class="co"># VDF004</span></span>
+<span id="cb16-21"><a href="http://localhost:5879/#cb16-21" aria-hidden="true" tabindex="-1"></a>  <span class="st">"hipertensao"</span>,            <span class="co"># Q00201</span></span>
+<span id="cb16-22"><a href="http://localhost:5879/#cb16-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"diabetes"</span>,               <span class="co"># Q03001</span></span>
+<span id="cb16-23"><a href="http://localhost:5879/#cb16-23" aria-hidden="true" tabindex="-1"></a>  <span class="st">"depressao"</span>,              <span class="co"># Q092</span></span>
+<span id="cb16-24"><a href="http://localhost:5879/#cb16-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"fadiga"</span>,                 <span class="co"># N011</span></span>
+<span id="cb16-25"><a href="http://localhost:5879/#cb16-25" aria-hidden="true" tabindex="-1"></a>  <span class="st">"consumo_alcool"</span>,         <span class="co"># P027</span></span>
+<span id="cb16-26"><a href="http://localhost:5879/#cb16-26" aria-hidden="true" tabindex="-1"></a>  <span class="st">"total_moradores"</span>,        <span class="co"># V0022</span></span>
+<span id="cb16-27"><a href="http://localhost:5879/#cb16-27" aria-hidden="true" tabindex="-1"></a>  <span class="st">"comodos_domicilio"</span>       <span class="co"># A01001</span></span>
+<span id="cb16-28"><a href="http://localhost:5879/#cb16-28" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="transformações-de-variáveis" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="transformações-de-variáveis"><span class="header-section-number">2.3</span> Transformações de variáveis<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#transforma%C3%A7%C3%B5es-de-vari%C3%A1veis" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h2>
+<p>Diversas variáveis são ajustadas para melhor representação nos modelos:</p>
+<ul>
+<li><strong>Saúde subjetiva geral</strong>: escala invertida para manter a coerência com a interpretação dos coeficientes.</li>
+<li><strong>Atividades sociais</strong>: também ajustadas para garantir consistência.</li>
+<li><strong>Variáveis binárias (dummies)</strong>: criadas para sexo e raça.</li>
+<li><strong>Densidade domiciliar</strong>: calculada como o número total de moradores dividido pelo número de cômodos da residência.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="http://localhost:5879/#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## (Des)inverter variável de saúde</span></span>
+<span id="cb17-2"><a href="http://localhost:5879/#cb17-2" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>saude_subjetiva_geral <span class="ot">&lt;-</span> <span class="dv">6</span> <span class="sc">-</span> pns_2019_red<span class="sc">$</span>saude_subjetiva_geral</span>
+<span id="cb17-3"><a href="http://localhost:5879/#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="http://localhost:5879/#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="do">## (Des)inverter variáveis de atividades</span></span>
+<span id="cb17-5"><a href="http://localhost:5879/#cb17-5" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>atividade_civica <span class="ot">&lt;-</span> <span class="dv">7</span> <span class="sc">-</span> pns_2019_red<span class="sc">$</span>atividade_civica</span>
+<span id="cb17-6"><a href="http://localhost:5879/#cb17-6" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>atividade_voluntaria <span class="ot">&lt;-</span> <span class="dv">7</span> <span class="sc">-</span> pns_2019_red<span class="sc">$</span>atividade_voluntaria</span>
+<span id="cb17-7"><a href="http://localhost:5879/#cb17-7" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>atividade_religiosa <span class="ot">&lt;-</span> <span class="dv">7</span> <span class="sc">-</span> pns_2019_red<span class="sc">$</span>atividade_religiosa</span>
+<span id="cb17-8"><a href="http://localhost:5879/#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="http://localhost:5879/#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Criar variável de atividades sociais (média)</span></span>
+<span id="cb17-10"><a href="http://localhost:5879/#cb17-10" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>nivel_atividade_social <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(pns_2019_red[, <span class="fu">c</span>(<span class="st">"atividade_civica"</span>, <span class="st">"atividade_voluntaria"</span>, <span class="st">"atividade_religiosa"</span>)], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb17-11"><a href="http://localhost:5879/#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="http://localhost:5879/#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="http://localhost:5879/#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="do">## Transformar sexo em dummy</span></span>
+<span id="cb17-14"><a href="http://localhost:5879/#cb17-14" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>sexo_feminino <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(pns_2019_red<span class="sc">$</span>sexo <span class="sc">==</span> <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb17-15"><a href="http://localhost:5879/#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="http://localhost:5879/#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="do">## Idade quadrada</span></span>
+<span id="cb17-17"><a href="http://localhost:5879/#cb17-17" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>idade2 <span class="ot">&lt;-</span> pns_2019_red<span class="sc">$</span>idade<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb17-18"><a href="http://localhost:5879/#cb17-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-19"><a href="http://localhost:5879/#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="do">## Criar variável de densidade domiciliar</span></span>
+<span id="cb17-20"><a href="http://localhost:5879/#cb17-20" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>densidade_domiciliar <span class="ot">&lt;-</span> pns_2019_red<span class="sc">$</span>total_moradores<span class="sc">/</span>pns_2019_red<span class="sc">$</span>comodos_domicilio</span>
+<span id="cb17-21"><a href="http://localhost:5879/#cb17-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-22"><a href="http://localhost:5879/#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="do">## Transformar raça em dummy</span></span>
+<span id="cb17-23"><a href="http://localhost:5879/#cb17-23" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>raca_branca <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(pns_2019_red<span class="sc">$</span>raca <span class="sc">==</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb17-24"><a href="http://localhost:5879/#cb17-24" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>raca_preta <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(pns_2019_red<span class="sc">$</span>raca <span class="sc">==</span> <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb17-25"><a href="http://localhost:5879/#cb17-25" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>raca_amarela <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(pns_2019_red<span class="sc">$</span>raca <span class="sc">==</span> <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb17-26"><a href="http://localhost:5879/#cb17-26" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>raca_parda <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(pns_2019_red<span class="sc">$</span>raca <span class="sc">==</span> <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb17-27"><a href="http://localhost:5879/#cb17-27" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>raca_indigena <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(pns_2019_red<span class="sc">$</span>raca <span class="sc">==</span> <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb17-28"><a href="http://localhost:5879/#cb17-28" aria-hidden="true" tabindex="-1"></a>pns_2019_red<span class="sc">$</span>raca_ignorada <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(pns_2019_red<span class="sc">$</span>raca <span class="sc">==</span> <span class="dv">9</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="modelagem-econométrica" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="modelagem-econométrica"><span class="header-section-number">2.4</span> Modelagem econométrica<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#modelagem-econom%C3%A9trica" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h2>
+<section id="regressão-linear-múltipla-mqo" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="regressão-linear-múltipla-mqo"><span class="header-section-number">2.4.1</span> Regressão linear múltipla (MQO)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#regress%C3%A3o-linear-m%C3%BAltipla-mqo" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h3>
+<p>O script executa regressões lineares para estimar a relação entre saúde subjetiva e variáveis explicativas relacionadas ao capital social.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="http://localhost:5879/#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Família</span></span>
+<span id="cb18-2"><a href="http://localhost:5879/#cb18-2" aria-hidden="true" tabindex="-1"></a>lm_familia <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb18-3"><a href="http://localhost:5879/#cb18-3" aria-hidden="true" tabindex="-1"></a>  saude_subjetiva_geral <span class="sc">~</span> familia <span class="sc">+</span> sexo_feminino <span class="sc">+</span> idade <span class="sc">+</span> idade2 <span class="sc">+</span></span>
+<span id="cb18-4"><a href="http://localhost:5879/#cb18-4" aria-hidden="true" tabindex="-1"></a>    raca_preta <span class="sc">+</span> raca_amarela <span class="sc">+</span> raca_parda <span class="sc">+</span></span>
+<span id="cb18-5"><a href="http://localhost:5879/#cb18-5" aria-hidden="true" tabindex="-1"></a>    raca_indigena <span class="sc">+</span> raca_ignorada <span class="sc">+</span> educacao <span class="sc">+</span> faixas_rendapc <span class="sc">+</span></span>
+<span id="cb18-6"><a href="http://localhost:5879/#cb18-6" aria-hidden="true" tabindex="-1"></a>    densidade_domiciliar,</span>
+<span id="cb18-7"><a href="http://localhost:5879/#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pns_2019_red</span>
+<span id="cb18-8"><a href="http://localhost:5879/#cb18-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-9"><a href="http://localhost:5879/#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_familia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = saude_subjetiva_geral ~ familia + sexo_feminino + 
+    idade + idade2 + raca_preta + raca_amarela + raca_parda + 
+    raca_indigena + raca_ignorada + educacao + faixas_rendapc + 
+    densidade_domiciliar, data = pns_2019_red)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.2179 -0.4319  0.0791  0.3801  1.7965 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)           3.741e+00  2.065e-02 181.127  &lt; 2e-16 ***
+familia               4.520e-02  2.732e-03  16.543  &lt; 2e-16 ***
+sexo_feminino        -1.075e-01  4.749e-03 -22.628  &lt; 2e-16 ***
+idade                -8.616e-03  7.091e-04 -12.151  &lt; 2e-16 ***
+idade2                1.227e-05  7.241e-06   1.694  0.09022 .  
+raca_preta           -4.947e-02  8.082e-03  -6.121 9.31e-10 ***
+raca_amarela         -1.600e-03  2.747e-02  -0.058  0.95355    
+raca_parda           -5.673e-02  5.328e-03 -10.647  &lt; 2e-16 ***
+raca_indigena        -7.253e-02  2.732e-02  -2.655  0.00793 ** 
+raca_ignorada         8.605e-02  2.214e-01   0.389  0.69755    
+educacao              4.968e-02  1.525e-03  32.576  &lt; 2e-16 ***
+faixas_rendapc        7.024e-02  1.984e-03  35.395  &lt; 2e-16 ***
+densidade_domiciliar  4.058e-02  7.181e-03   5.650 1.61e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.7001 on 89100 degrees of freedom
+  (22 observations deleted due to missingness)
+Multiple R-squared:  0.1043,    Adjusted R-squared:  0.1042 
+F-statistic: 864.8 on 12 and 89100 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="http://localhost:5879/#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Amigos</span></span>
+<span id="cb20-2"><a href="http://localhost:5879/#cb20-2" aria-hidden="true" tabindex="-1"></a>lm_amigos <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb20-3"><a href="http://localhost:5879/#cb20-3" aria-hidden="true" tabindex="-1"></a>  saude_subjetiva_geral <span class="sc">~</span> amigos <span class="sc">+</span> sexo_feminino <span class="sc">+</span> idade <span class="sc">+</span> idade2 <span class="sc">+</span></span>
+<span id="cb20-4"><a href="http://localhost:5879/#cb20-4" aria-hidden="true" tabindex="-1"></a>    raca_preta <span class="sc">+</span> raca_amarela <span class="sc">+</span> raca_parda <span class="sc">+</span></span>
+<span id="cb20-5"><a href="http://localhost:5879/#cb20-5" aria-hidden="true" tabindex="-1"></a>    raca_indigena <span class="sc">+</span> raca_ignorada <span class="sc">+</span> educacao <span class="sc">+</span> faixas_rendapc,</span>
+<span id="cb20-6"><a href="http://localhost:5879/#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pns_2019_red</span>
+<span id="cb20-7"><a href="http://localhost:5879/#cb20-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-8"><a href="http://localhost:5879/#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_amigos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = saude_subjetiva_geral ~ amigos + sexo_feminino + 
+    idade + idade2 + raca_preta + raca_amarela + raca_parda + 
+    raca_indigena + raca_ignorada + educacao + faixas_rendapc, 
+    data = pns_2019_red)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.2614 -0.4303  0.0819  0.3797  1.8548 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)     3.847e+00  1.790e-02 214.880  &lt; 2e-16 ***
+amigos          3.873e-02  1.985e-03  19.511  &lt; 2e-16 ***
+sexo_feminino  -1.044e-01  4.753e-03 -21.958  &lt; 2e-16 ***
+idade          -9.526e-03  7.062e-04 -13.489  &lt; 2e-16 ***
+idade2          1.879e-05  7.227e-06   2.600  0.00931 ** 
+raca_preta     -4.969e-02  8.077e-03  -6.153 7.65e-10 ***
+raca_amarela   -1.383e-03  2.746e-02  -0.050  0.95982    
+raca_parda     -5.303e-02  5.323e-03  -9.963  &lt; 2e-16 ***
+raca_indigena  -6.056e-02  2.725e-02  -2.222  0.02627 *  
+raca_ignorada   9.375e-02  2.213e-01   0.424  0.67190    
+educacao        4.876e-02  1.525e-03  31.964  &lt; 2e-16 ***
+faixas_rendapc  6.453e-02  1.899e-03  33.986  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.6998 on 89101 degrees of freedom
+  (22 observations deleted due to missingness)
+Multiple R-squared:  0.1051,    Adjusted R-squared:  0.1049 
+F-statistic: 950.9 on 11 and 89101 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+<section id="regressão-com-variáveis-instrumentais-2sls" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="regressão-com-variáveis-instrumentais-2sls"><span class="header-section-number">2.4.2</span> Regressão com variáveis instrumentais (2SLS)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#regress%C3%A3o-com-vari%C3%A1veis-instrumentais-2sls" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h3>
+<p>Regressões com instrumentos são feitas para tratar problemas de endogeneidade:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="http://localhost:5879/#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Regressão com instrumentos - família</span></span>
+<span id="cb22-2"><a href="http://localhost:5879/#cb22-2" aria-hidden="true" tabindex="-1"></a>iv_familia <span class="ot">&lt;-</span> <span class="fu">ivreg</span>(</span>
+<span id="cb22-3"><a href="http://localhost:5879/#cb22-3" aria-hidden="true" tabindex="-1"></a>  saude_subjetiva_geral <span class="sc">~</span> familia <span class="sc">+</span> sexo_feminino <span class="sc">+</span> idade <span class="sc">+</span> idade2 <span class="sc">+</span></span>
+<span id="cb22-4"><a href="http://localhost:5879/#cb22-4" aria-hidden="true" tabindex="-1"></a>    raca_preta <span class="sc">+</span> raca_amarela <span class="sc">+</span> raca_parda <span class="sc">+</span></span>
+<span id="cb22-5"><a href="http://localhost:5879/#cb22-5" aria-hidden="true" tabindex="-1"></a>    raca_indigena <span class="sc">+</span> raca_ignorada <span class="sc">+</span> educacao <span class="sc">+</span> faixas_rendapc <span class="sc">+</span></span>
+<span id="cb22-6"><a href="http://localhost:5879/#cb22-6" aria-hidden="true" tabindex="-1"></a>    densidade_domiciliar <span class="sc">|</span></span>
+<span id="cb22-7"><a href="http://localhost:5879/#cb22-7" aria-hidden="true" tabindex="-1"></a>    total_moradores <span class="sc">+</span> sexo_feminino <span class="sc">+</span> idade <span class="sc">+</span> idade2 <span class="sc">+</span></span>
+<span id="cb22-8"><a href="http://localhost:5879/#cb22-8" aria-hidden="true" tabindex="-1"></a>    raca_preta <span class="sc">+</span> raca_amarela <span class="sc">+</span> raca_parda <span class="sc">+</span></span>
+<span id="cb22-9"><a href="http://localhost:5879/#cb22-9" aria-hidden="true" tabindex="-1"></a>    raca_indigena <span class="sc">+</span> raca_ignorada <span class="sc">+</span> educacao <span class="sc">+</span> faixas_rendapc <span class="sc">+</span></span>
+<span id="cb22-10"><a href="http://localhost:5879/#cb22-10" aria-hidden="true" tabindex="-1"></a>    densidade_domiciliar,</span>
+<span id="cb22-11"><a href="http://localhost:5879/#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pns_2019_red</span>
+<span id="cb22-12"><a href="http://localhost:5879/#cb22-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-13"><a href="http://localhost:5879/#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iv_familia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+ivreg(formula = saude_subjetiva_geral ~ familia + sexo_feminino + 
+    idade + idade2 + raca_preta + raca_amarela + raca_parda + 
+    raca_indigena + raca_ignorada + educacao + faixas_rendapc + 
+    densidade_domiciliar | total_moradores + sexo_feminino + 
+    idade + idade2 + raca_preta + raca_amarela + raca_parda + 
+    raca_indigena + raca_ignorada + educacao + faixas_rendapc + 
+    densidade_domiciliar, data = pns_2019_red)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-3.21304 -0.41814  0.07432  0.38468  1.89376 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)           3.637e+00  6.333e-02  57.434  &lt; 2e-16 ***
+familia               8.635e-02  2.403e-02   3.594 0.000326 ***
+sexo_feminino        -1.054e-01  4.900e-03 -21.513  &lt; 2e-16 ***
+idade                -8.079e-03  7.752e-04 -10.422  &lt; 2e-16 ***
+idade2                6.363e-06  8.019e-06   0.794 0.427460    
+raca_preta           -4.672e-02  8.248e-03  -5.664 1.48e-08 ***
+raca_amarela          4.626e-03  2.774e-02   0.167 0.867567    
+raca_parda           -5.539e-02  5.392e-03 -10.274  &lt; 2e-16 ***
+raca_indigena        -6.620e-02  2.760e-02  -2.399 0.016444 *  
+raca_ignorada         8.453e-02  2.217e-01   0.381 0.703017    
+educacao              4.849e-02  1.674e-03  28.963  &lt; 2e-16 ***
+faixas_rendapc        6.853e-02  2.220e-03  30.874  &lt; 2e-16 ***
+densidade_domiciliar  3.944e-02  7.220e-03   5.463 4.69e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.701 on 89100 degrees of freedom
+Multiple R-Squared: 0.102,  Adjusted R-squared: 0.1019 
+Wald test:   841 on 12 and 89100 DF,  p-value: &lt; 2.2e-16 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="http://localhost:5879/#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Regressão com instrumentos - amigos</span></span>
+<span id="cb24-2"><a href="http://localhost:5879/#cb24-2" aria-hidden="true" tabindex="-1"></a>iv_amigos <span class="ot">&lt;-</span> <span class="fu">ivreg</span>(</span>
+<span id="cb24-3"><a href="http://localhost:5879/#cb24-3" aria-hidden="true" tabindex="-1"></a>  saude_subjetiva_geral <span class="sc">~</span> amigos <span class="sc">+</span> sexo_feminino <span class="sc">+</span> idade <span class="sc">+</span> idade2 <span class="sc">+</span></span>
+<span id="cb24-4"><a href="http://localhost:5879/#cb24-4" aria-hidden="true" tabindex="-1"></a>    raca_preta <span class="sc">+</span> raca_amarela <span class="sc">+</span> raca_parda <span class="sc">+</span></span>
+<span id="cb24-5"><a href="http://localhost:5879/#cb24-5" aria-hidden="true" tabindex="-1"></a>    raca_indigena <span class="sc">+</span> raca_ignorada <span class="sc">+</span> educacao <span class="sc">+</span> faixas_rendapc <span class="sc">|</span></span>
+<span id="cb24-6"><a href="http://localhost:5879/#cb24-6" aria-hidden="true" tabindex="-1"></a>    nivel_atividade_social <span class="sc">+</span> sexo_feminino <span class="sc">+</span> idade <span class="sc">+</span> idade2 <span class="sc">+</span></span>
+<span id="cb24-7"><a href="http://localhost:5879/#cb24-7" aria-hidden="true" tabindex="-1"></a>    raca_preta <span class="sc">+</span> raca_amarela <span class="sc">+</span> raca_parda <span class="sc">+</span></span>
+<span id="cb24-8"><a href="http://localhost:5879/#cb24-8" aria-hidden="true" tabindex="-1"></a>    raca_indigena <span class="sc">+</span> raca_ignorada <span class="sc">+</span> educacao <span class="sc">+</span> faixas_rendapc,</span>
+<span id="cb24-9"><a href="http://localhost:5879/#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pns_2019_red</span>
+<span id="cb24-10"><a href="http://localhost:5879/#cb24-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb24-11"><a href="http://localhost:5879/#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iv_amigos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+ivreg(formula = saude_subjetiva_geral ~ amigos + sexo_feminino + 
+    idade + idade2 + raca_preta + raca_amarela + raca_parda + 
+    raca_indigena + raca_ignorada + educacao + faixas_rendapc | 
+    nivel_atividade_social + sexo_feminino + idade + idade2 + 
+        raca_preta + raca_amarela + raca_parda + raca_indigena + 
+        raca_ignorada + educacao + faixas_rendapc, data = pns_2019_red)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-3.36540 -0.37057  0.05366  0.43375  2.02636 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)     3.687e+00  2.862e-02 128.836  &lt; 2e-16 ***
+amigos          1.529e-01  1.584e-02   9.649  &lt; 2e-16 ***
+sexo_feminino  -8.812e-02  5.333e-03 -16.523  &lt; 2e-16 ***
+idade          -9.636e-03  7.194e-04 -13.395  &lt; 2e-16 ***
+idade2          1.773e-05  7.361e-06   2.409    0.016 *  
+raca_preta     -4.290e-02  8.278e-03  -5.183 2.19e-07 ***
+raca_amarela    1.683e-02  2.807e-02   0.599    0.549    
+raca_parda     -4.197e-02  5.631e-03  -7.452 9.28e-14 ***
+raca_indigena  -3.416e-02  2.799e-02  -1.220    0.222    
+raca_ignorada   1.188e-01  2.254e-01   0.527    0.598    
+educacao        4.282e-02  1.756e-03  24.386  &lt; 2e-16 ***
+faixas_rendapc  5.249e-02  2.547e-03  20.611  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.7127 on 89101 degrees of freedom
+Multiple R-Squared: 0.07185,    Adjusted R-squared: 0.07174 
+Wald test: 891.9 on 11 and 89101 DF,  p-value: &lt; 2.2e-16 </code></pre>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="testes-estatísticos" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="testes-estatísticos"><span class="header-section-number">2.5</span> Testes estatísticos<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#testes-estat%C3%ADsticos" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h2>
+<p>Diversos testes são realizados para avaliar a qualidade dos modelos:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="http://localhost:5879/#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Teste de força do instrumento</span></span>
+<span id="cb26-2"><a href="http://localhost:5879/#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Primeira etapa: Regressão de 'familia' na variável instrumental e controles</span></span>
+<span id="cb26-3"><a href="http://localhost:5879/#cb26-3" aria-hidden="true" tabindex="-1"></a>first_stage <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb26-4"><a href="http://localhost:5879/#cb26-4" aria-hidden="true" tabindex="-1"></a>  familia <span class="sc">~</span> total_moradores <span class="sc">+</span> sexo_feminino <span class="sc">+</span> idade <span class="sc">+</span></span>
+<span id="cb26-5"><a href="http://localhost:5879/#cb26-5" aria-hidden="true" tabindex="-1"></a>    raca_preta <span class="sc">+</span> raca_amarela <span class="sc">+</span> raca_parda <span class="sc">+</span></span>
+<span id="cb26-6"><a href="http://localhost:5879/#cb26-6" aria-hidden="true" tabindex="-1"></a>    raca_indigena <span class="sc">+</span> raca_ignorada <span class="sc">+</span> educacao <span class="sc">+</span> faixas_rendapc <span class="sc">+</span></span>
+<span id="cb26-7"><a href="http://localhost:5879/#cb26-7" aria-hidden="true" tabindex="-1"></a>    densidade_domiciliar,</span>
+<span id="cb26-8"><a href="http://localhost:5879/#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pns_2019_red</span>
+<span id="cb26-9"><a href="http://localhost:5879/#cb26-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-10"><a href="http://localhost:5879/#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(first_stage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = familia ~ total_moradores + sexo_feminino + idade + 
+    raca_preta + raca_amarela + raca_parda + raca_indigena + 
+    raca_ignorada + educacao + faixas_rendapc + densidade_domiciliar, 
+    data = pns_2019_red)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.9617 -0.4267  0.4255  0.5679  2.2933 
+
+Coefficients:
+                      Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)           2.060964   0.017516 117.660  &lt; 2e-16 ***
+total_moradores       0.094814   0.002780  34.111  &lt; 2e-16 ***
+sexo_feminino        -0.046139   0.005789  -7.971 1.60e-15 ***
+idade                 0.001343   0.000199   6.751 1.48e-11 ***
+raca_preta           -0.056861   0.009863  -5.765 8.18e-09 ***
+raca_amarela         -0.147790   0.033511  -4.410 1.03e-05 ***
+raca_parda           -0.029156   0.006500  -4.485 7.29e-06 ***
+raca_indigena        -0.112933   0.033346  -3.387 0.000708 ***
+raca_ignorada         0.090697   0.270160   0.336 0.737085    
+educacao              0.019413   0.001853  10.479  &lt; 2e-16 ***
+faixas_rendapc        0.048685   0.002422  20.105  &lt; 2e-16 ***
+densidade_domiciliar -0.226775   0.011528 -19.671  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.8542 on 89101 degrees of freedom
+  (22 observations deleted due to missingness)
+Multiple R-squared:  0.0279,    Adjusted R-squared:  0.02778 
+F-statistic: 232.5 on 11 and 89101 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="http://localhost:5879/#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Teste de força do instrumento: Estatística F da primeira etapa</span></span>
+<span id="cb28-2"><a href="http://localhost:5879/#cb28-2" aria-hidden="true" tabindex="-1"></a>f_stat <span class="ot">&lt;-</span> <span class="fu">linearHypothesis</span>(first_stage, <span class="st">"total_moradores = 0"</span>, <span class="at">test =</span> <span class="st">"F"</span>)</span>
+<span id="cb28-3"><a href="http://localhost:5879/#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(f_stat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Linear hypothesis test:
+total_moradores = 0
+
+Model 1: restricted model
+Model 2: familia ~ total_moradores + sexo_feminino + idade + raca_preta + 
+    raca_amarela + raca_parda + raca_indigena + raca_ignorada + 
+    educacao + faixas_rendapc + densidade_domiciliar
+
+  Res.Df   RSS Df Sum of Sq      F    Pr(&gt;F)    
+1  89102 65855                                  
+2  89101 65006  1    848.89 1163.5 &lt; 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="http://localhost:5879/#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="do">## 1. Linearidade</span></span>
+<span id="cb30-2"><a href="http://localhost:5879/#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="do">### Gráfico de resíduos vs valores ajustados</span></span>
+<span id="cb30-3"><a href="http://localhost:5879/#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">fitted</span>(iv_familia), <span class="fu">residuals</span>(iv_familia),</span>
+<span id="cb30-4"><a href="http://localhost:5879/#cb30-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Valores Ajustados"</span>, </span>
+<span id="cb30-5"><a href="http://localhost:5879/#cb30-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Resíduos"</span>, </span>
+<span id="cb30-6"><a href="http://localhost:5879/#cb30-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Resíduos vs. Valores Ajustados"</span>)</span>
+<span id="cb30-7"><a href="http://localhost:5879/#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="./Dois Projetos em Ciência de Dados_files/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="http://localhost:5879/#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="do">## 2. Homoscedasticidade</span></span>
+<span id="cb31-2"><a href="http://localhost:5879/#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bptest</span>(iv_familia)     <span class="co"># Resultado esperado: p-valor &gt; 0,5 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    studentized Breusch-Pagan test
+
+data:  iv_familia
+BP = 1053, df = 12, p-value &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="http://localhost:5879/#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Para corrigir, usar erros padrão robustos</span></span>
+<span id="cb33-2"><a href="http://localhost:5879/#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">coeftest</span>(iv_familia, <span class="at">vcov =</span> <span class="fu">vcovHC</span>(iv_familia, <span class="at">type =</span> <span class="st">"HC1"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+t test of coefficients:
+
+                        Estimate  Std. Error  t value  Pr(&gt;|t|)    
+(Intercept)           3.6375e+00  6.2167e-02  58.5117 &lt; 2.2e-16 ***
+familia               8.6347e-02  2.3458e-02   3.6810 0.0002325 ***
+sexo_feminino        -1.0541e-01  4.8712e-03 -21.6399 &lt; 2.2e-16 ***
+idade                -8.0795e-03  7.7086e-04 -10.4811 &lt; 2.2e-16 ***
+idade2                6.3632e-06  8.0855e-06   0.7870 0.4312949    
+raca_preta           -4.6718e-02  8.4250e-03  -5.5451 2.945e-08 ***
+raca_amarela          4.6259e-03  2.8486e-02   0.1624 0.8709959    
+raca_parda           -5.5393e-02  5.4090e-03 -10.2409 &lt; 2.2e-16 ***
+raca_indigena        -6.6199e-02  2.9629e-02  -2.2343 0.0254687 *  
+raca_ignorada         8.4529e-02  1.6541e-01   0.5110 0.6093422    
+educacao              4.8494e-02  1.6718e-03  29.0066 &lt; 2.2e-16 ***
+faixas_rendapc        6.8531e-02  2.1936e-03  31.2413 &lt; 2.2e-16 ***
+densidade_domiciliar  3.9444e-02  6.8930e-03   5.7224 1.054e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="http://localhost:5879/#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="do">## 3. Normalidade dos resíduos</span></span>
+<span id="cb35-2"><a href="http://localhost:5879/#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="do">### Teste de Shapiro-Wilk</span></span>
+<span id="cb35-3"><a href="http://localhost:5879/#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)  <span class="co"># Para reprodutibilidade</span></span>
+<span id="cb35-4"><a href="http://localhost:5879/#cb35-4" aria-hidden="true" tabindex="-1"></a>amostra_residuos <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">residuals</span>(iv_familia), <span class="at">size =</span> <span class="dv">5000</span>)</span>
+<span id="cb35-5"><a href="http://localhost:5879/#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(amostra_residuos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  amostra_residuos
+W = 0.97372, p-value &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="http://localhost:5879/#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Histograma dos resíduos</span></span>
+<span id="cb37-2"><a href="http://localhost:5879/#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">residuals</span>(iv_familia), <span class="at">breaks =</span> <span class="dv">20</span>, </span>
+<span id="cb37-3"><a href="http://localhost:5879/#cb37-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Histograma dos Resíduos"</span>, </span>
+<span id="cb37-4"><a href="http://localhost:5879/#cb37-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Resíduos"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="./Dois Projetos em Ciência de Dados_files/unnamed-chunk-10-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="http://localhost:5879/#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Q-Q Plot</span></span>
+<span id="cb38-2"><a href="http://localhost:5879/#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(<span class="fu">residuals</span>(iv_familia))</span>
+<span id="cb38-3"><a href="http://localhost:5879/#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">qqline</span>(<span class="fu">residuals</span>(iv_familia), <span class="at">col =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="./Dois Projetos em Ciência de Dados_files/unnamed-chunk-10-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="robustez" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="robustez"><span class="header-section-number">2.6</span> Robustez<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#robustez" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h2>
+<p>Para averiguar o funcionamento do modelo proposto em diferentes contextos, as regressões serão refeitas isoladamente com as amostras de cada uma das regiões brasileiras.</p>
+<p>Para isso, são primeiro definidos os estados pertencentes a cada região, e criado um dataframe para armazenar o resultado dos coeficientes</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="http://localhost:5879/#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Definir as regiões brasileiras</span></span>
+<span id="cb39-2"><a href="http://localhost:5879/#cb39-2" aria-hidden="true" tabindex="-1"></a>regioes <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb39-3"><a href="http://localhost:5879/#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Norte"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">17</span>),</span>
+<span id="cb39-4"><a href="http://localhost:5879/#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Nordeste"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">22</span>, <span class="dv">23</span>, <span class="dv">24</span>, <span class="dv">25</span>, <span class="dv">26</span>, <span class="dv">27</span>, <span class="dv">28</span>, <span class="dv">29</span>),</span>
+<span id="cb39-5"><a href="http://localhost:5879/#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sudeste"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">31</span>, <span class="dv">32</span>, <span class="dv">33</span>, <span class="dv">35</span>),</span>
+<span id="cb39-6"><a href="http://localhost:5879/#cb39-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sul"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">41</span>, <span class="dv">42</span>, <span class="dv">43</span>),</span>
+<span id="cb39-7"><a href="http://localhost:5879/#cb39-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Centro-Oeste"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">51</span>, <span class="dv">52</span>, <span class="dv">53</span>)</span>
+<span id="cb39-8"><a href="http://localhost:5879/#cb39-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb39-9"><a href="http://localhost:5879/#cb39-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-10"><a href="http://localhost:5879/#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Criar um dataframe para armazenar os coeficientes e p-valores por região</span></span>
+<span id="cb39-11"><a href="http://localhost:5879/#cb39-11" aria-hidden="true" tabindex="-1"></a>resultados_coefs <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb39-12"><a href="http://localhost:5879/#cb39-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">regiao =</span> <span class="fu">character</span>(),</span>
+<span id="cb39-13"><a href="http://localhost:5879/#cb39-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">coef_familia =</span> <span class="fu">numeric</span>(),</span>
+<span id="cb39-14"><a href="http://localhost:5879/#cb39-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">p_valor_familia =</span> <span class="fu">numeric</span>(),</span>
+<span id="cb39-15"><a href="http://localhost:5879/#cb39-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">coef_amigos =</span> <span class="fu">numeric</span>(),</span>
+<span id="cb39-16"><a href="http://localhost:5879/#cb39-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">p_valor_amigos =</span> <span class="fu">numeric</span>(),</span>
+<span id="cb39-17"><a href="http://localhost:5879/#cb39-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb39-18"><a href="http://localhost:5879/#cb39-18" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Para rodar as regressões, cria-se um loop que repete as regressões para cada região.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="http://localhost:5879/#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop para realizar duas regressões por região</span></span>
+<span id="cb40-2"><a href="http://localhost:5879/#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (regiao <span class="cf">in</span> <span class="fu">names</span>(regioes)) {</span>
+<span id="cb40-3"><a href="http://localhost:5879/#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filtrar os dados para a região atual</span></span>
+<span id="cb40-4"><a href="http://localhost:5879/#cb40-4" aria-hidden="true" tabindex="-1"></a>  estados_da_regiao <span class="ot">&lt;-</span> regioes[[regiao]]</span>
+<span id="cb40-5"><a href="http://localhost:5879/#cb40-5" aria-hidden="true" tabindex="-1"></a>  dados_regiao <span class="ot">&lt;-</span> <span class="fu">subset</span>(pns_2019_red, UF <span class="sc">%in%</span> estados_da_regiao)</span>
+<span id="cb40-6"><a href="http://localhost:5879/#cb40-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb40-7"><a href="http://localhost:5879/#cb40-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Regressão 1: Familia</span></span>
+<span id="cb40-8"><a href="http://localhost:5879/#cb40-8" aria-hidden="true" tabindex="-1"></a>  modelo_familia <span class="ot">&lt;-</span> <span class="fu">ivreg</span>(</span>
+<span id="cb40-9"><a href="http://localhost:5879/#cb40-9" aria-hidden="true" tabindex="-1"></a>    saude_subjetiva_geral <span class="sc">~</span> familia <span class="sc">+</span> sexo_feminino <span class="sc">+</span> idade <span class="sc">+</span> idade2 <span class="sc">+</span></span>
+<span id="cb40-10"><a href="http://localhost:5879/#cb40-10" aria-hidden="true" tabindex="-1"></a>      raca_preta <span class="sc">+</span> raca_amarela <span class="sc">+</span> raca_parda <span class="sc">+</span></span>
+<span id="cb40-11"><a href="http://localhost:5879/#cb40-11" aria-hidden="true" tabindex="-1"></a>      raca_indigena <span class="sc">+</span> raca_ignorada <span class="sc">+</span> educacao <span class="sc">+</span> faixas_rendapc <span class="sc">+</span></span>
+<span id="cb40-12"><a href="http://localhost:5879/#cb40-12" aria-hidden="true" tabindex="-1"></a>      densidade_domiciliar <span class="sc">|</span></span>
+<span id="cb40-13"><a href="http://localhost:5879/#cb40-13" aria-hidden="true" tabindex="-1"></a>      total_moradores <span class="sc">+</span> sexo_feminino <span class="sc">+</span> idade <span class="sc">+</span> idade2 <span class="sc">+</span></span>
+<span id="cb40-14"><a href="http://localhost:5879/#cb40-14" aria-hidden="true" tabindex="-1"></a>      raca_preta <span class="sc">+</span> raca_amarela <span class="sc">+</span> raca_parda <span class="sc">+</span></span>
+<span id="cb40-15"><a href="http://localhost:5879/#cb40-15" aria-hidden="true" tabindex="-1"></a>      raca_indigena <span class="sc">+</span> raca_ignorada <span class="sc">+</span> educacao <span class="sc">+</span> faixas_rendapc <span class="sc">+</span></span>
+<span id="cb40-16"><a href="http://localhost:5879/#cb40-16" aria-hidden="true" tabindex="-1"></a>      densidade_domiciliar,</span>
+<span id="cb40-17"><a href="http://localhost:5879/#cb40-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> dados_regiao</span>
+<span id="cb40-18"><a href="http://localhost:5879/#cb40-18" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb40-19"><a href="http://localhost:5879/#cb40-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb40-20"><a href="http://localhost:5879/#cb40-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Regressão 2: Amigos</span></span>
+<span id="cb40-21"><a href="http://localhost:5879/#cb40-21" aria-hidden="true" tabindex="-1"></a>  modelo_amigos <span class="ot">&lt;-</span> <span class="fu">ivreg</span>(</span>
+<span id="cb40-22"><a href="http://localhost:5879/#cb40-22" aria-hidden="true" tabindex="-1"></a>    saude_subjetiva_geral <span class="sc">~</span> amigos <span class="sc">+</span> sexo_feminino <span class="sc">+</span> idade <span class="sc">+</span> idade2 <span class="sc">+</span></span>
+<span id="cb40-23"><a href="http://localhost:5879/#cb40-23" aria-hidden="true" tabindex="-1"></a>      raca_preta <span class="sc">+</span> raca_amarela <span class="sc">+</span> raca_parda <span class="sc">+</span></span>
+<span id="cb40-24"><a href="http://localhost:5879/#cb40-24" aria-hidden="true" tabindex="-1"></a>      raca_indigena <span class="sc">+</span> raca_ignorada <span class="sc">+</span> educacao <span class="sc">+</span> faixas_rendapc <span class="sc">+</span></span>
+<span id="cb40-25"><a href="http://localhost:5879/#cb40-25" aria-hidden="true" tabindex="-1"></a>      densidade_domiciliar <span class="sc">|</span></span>
+<span id="cb40-26"><a href="http://localhost:5879/#cb40-26" aria-hidden="true" tabindex="-1"></a>      nivel_atividade_social <span class="sc">+</span> sexo_feminino <span class="sc">+</span> idade <span class="sc">+</span> idade2 <span class="sc">+</span></span>
+<span id="cb40-27"><a href="http://localhost:5879/#cb40-27" aria-hidden="true" tabindex="-1"></a>      raca_preta <span class="sc">+</span> raca_amarela <span class="sc">+</span> raca_parda <span class="sc">+</span></span>
+<span id="cb40-28"><a href="http://localhost:5879/#cb40-28" aria-hidden="true" tabindex="-1"></a>      raca_indigena <span class="sc">+</span> raca_ignorada <span class="sc">+</span> educacao <span class="sc">+</span> faixas_rendapc <span class="sc">+</span></span>
+<span id="cb40-29"><a href="http://localhost:5879/#cb40-29" aria-hidden="true" tabindex="-1"></a>      densidade_domiciliar,</span>
+<span id="cb40-30"><a href="http://localhost:5879/#cb40-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> dados_regiao</span>
+<span id="cb40-31"><a href="http://localhost:5879/#cb40-31" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb40-32"><a href="http://localhost:5879/#cb40-32" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb40-33"><a href="http://localhost:5879/#cb40-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Extrair coeficientes e p-valores</span></span>
+<span id="cb40-34"><a href="http://localhost:5879/#cb40-34" aria-hidden="true" tabindex="-1"></a>  coef_familia <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(modelo_familia))[<span class="st">"familia"</span>, <span class="st">"Estimate"</span>]</span>
+<span id="cb40-35"><a href="http://localhost:5879/#cb40-35" aria-hidden="true" tabindex="-1"></a>  p_valor_familia <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(modelo_familia))[<span class="st">"familia"</span>, <span class="st">"Pr(&gt;|t|)"</span>]</span>
+<span id="cb40-36"><a href="http://localhost:5879/#cb40-36" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb40-37"><a href="http://localhost:5879/#cb40-37" aria-hidden="true" tabindex="-1"></a>  coef_amigos <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(modelo_amigos))[<span class="st">"amigos"</span>, <span class="st">"Estimate"</span>]</span>
+<span id="cb40-38"><a href="http://localhost:5879/#cb40-38" aria-hidden="true" tabindex="-1"></a>  p_valor_amigos <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(modelo_amigos))[<span class="st">"amigos"</span>, <span class="st">"Pr(&gt;|t|)"</span>]</span>
+<span id="cb40-39"><a href="http://localhost:5879/#cb40-39" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb40-40"><a href="http://localhost:5879/#cb40-40" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Adicionar os resultados ao dataframe</span></span>
+<span id="cb40-41"><a href="http://localhost:5879/#cb40-41" aria-hidden="true" tabindex="-1"></a>  resultados_coefs <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb40-42"><a href="http://localhost:5879/#cb40-42" aria-hidden="true" tabindex="-1"></a>    resultados_coefs, </span>
+<span id="cb40-43"><a href="http://localhost:5879/#cb40-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.frame</span>(</span>
+<span id="cb40-44"><a href="http://localhost:5879/#cb40-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">regiao =</span> regiao,</span>
+<span id="cb40-45"><a href="http://localhost:5879/#cb40-45" aria-hidden="true" tabindex="-1"></a>      <span class="at">coef_familia =</span> coef_familia,</span>
+<span id="cb40-46"><a href="http://localhost:5879/#cb40-46" aria-hidden="true" tabindex="-1"></a>      <span class="at">p_valor_familia =</span> p_valor_familia,</span>
+<span id="cb40-47"><a href="http://localhost:5879/#cb40-47" aria-hidden="true" tabindex="-1"></a>      <span class="at">coef_amigos =</span> coef_amigos,</span>
+<span id="cb40-48"><a href="http://localhost:5879/#cb40-48" aria-hidden="true" tabindex="-1"></a>      <span class="at">p_valor_amigos =</span> p_valor_amigos</span>
+<span id="cb40-49"><a href="http://localhost:5879/#cb40-49" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb40-50"><a href="http://localhost:5879/#cb40-50" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb40-51"><a href="http://localhost:5879/#cb40-51" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb40-52"><a href="http://localhost:5879/#cb40-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-53"><a href="http://localhost:5879/#cb40-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Exibir os resultados</span></span>
+<span id="cb40-54"><a href="http://localhost:5879/#cb40-54" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(resultados_coefs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        regiao coef_familia p_valor_familia coef_amigos p_valor_amigos
+1        Norte   0.08993371    9.914402e-02   0.1397221   1.670673e-06
+2     Nordeste   0.03100280    5.080125e-01   0.1107870   6.951464e-05
+3      Sudeste   0.17125744    6.489285e-05   0.1685787   2.339741e-05
+4          Sul   0.12952097    5.988655e-02   0.2588564   2.009771e-10
+5 Centro-Oeste   0.22804576    1.516488e-03   0.1027147   1.801200e-02</code></pre>
+</div>
+</div>
+</section>
+<section id="conclusão" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="conclusão"><span class="header-section-number">2.7</span> Conclusão<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#conclus%C3%A3o" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h2>
+<p>O script realiza uma série de tratamentos na base de dados da PNS 2019 e conduz análises econométricas para avaliar o impacto do capital social na saúde subjetiva dos indivíduos. A utilização de regressões com variáveis instrumentais busca corrigir problemas de endogeneidade, enquanto testes adicionais garantem a qualidade dos modelos. A robustez é avaliada por região, garantindo que os resultados sejam consistentes em diferentes contextos.</p>
+</section>
+</section>
+<section id="crime-e-desemprego-uma-análise-internacional-com-dados-em-painel" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Crime e Desemprego: uma análise internacional com dados em painel</h1>
+<p>Este documento descreve o script crime_time_series.R, explicando suas etapas de processamento de dados, análise estatística e modelagem econométrica aplicada à criminalidade ao longo do tempo.</p>
+<section id="bibliotecas-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="bibliotecas-1"><span class="header-section-number">3.1</span> Bibliotecas<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#bibliotecas-1" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h2>
+<p>O script carrega os seguintes pacotes para manipulação de dados, modelagem econométrica e visualização:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="http://localhost:5879/#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb42-2"><a href="http://localhost:5879/#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Anexando pacote: 'plm'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Os seguintes objetos são mascarados por 'package:dplyr':
+
+    between, lag, lead</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="http://localhost:5879/#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pcse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Anexando pacote: 'pcse'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>O seguinte objeto é mascarado por 'package:sandwich':
+
+    vcovPC</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="http://localhost:5879/#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmtest)</span>
+<span id="cb48-2"><a href="http://localhost:5879/#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
+<span id="cb48-3"><a href="http://localhost:5879/#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb48-4"><a href="http://localhost:5879/#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(systemfit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Carregando pacotes exigidos: Matrix</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Anexando pacote: 'Matrix'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Os seguintes objetos são mascarados por 'package:tidyr':
+
+    expand, pack, unpack</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Please cite the 'systemfit' package as:
+Arne Henningsen and Jeff D. Hamann (2007). systemfit: A Package for Estimating Systems of Simultaneous Equations in R. Journal of Statistical Software 23(4), 1-40. http://www.jstatsoft.org/v23/i04/.
+
+If you have questions, suggestions, or comments regarding the 'systemfit' package, please use a forum or 'tracker' at systemfit's R-Forge site:
+https://r-forge.r-project.org/projects/systemfit/</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="http://localhost:5879/#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="carregamento-e-tratamento-dos-dados-1" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="carregamento-e-tratamento-dos-dados-1"><span class="header-section-number">3.2</span> Carregamento e tratamento dos dados<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#carregamento-e-tratamento-dos-dados-1" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h2>
+<section id="dados-de-criminalidade" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="dados-de-criminalidade"><span class="header-section-number">3.2.1</span> Dados de criminalidade<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#dados-de-criminalidade" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h3>
+<p>O script lê os dados de criminalidade a partir do arquivo crime_data.csv:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="http://localhost:5879/#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tidying crime data</span></span>
+<span id="cb54-2"><a href="http://localhost:5879/#cb54-2" aria-hidden="true" tabindex="-1"></a>crime_data <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">"./crime_data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A base é organizada para transformar categorias de crimes em colunas separadas:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="http://localhost:5879/#cb55-1" aria-hidden="true" tabindex="-1"></a>crime_ts <span class="ot">&lt;-</span> crime_data <span class="sc">%&gt;%</span></span>
+<span id="cb55-2"><a href="http://localhost:5879/#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Iso3_code, Country, Year, Category, VALUE) <span class="sc">%&gt;%</span></span>
+<span id="cb55-3"><a href="http://localhost:5879/#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">spread</span>(<span class="at">key =</span> Category, <span class="at">value =</span> VALUE) <span class="sc">%&gt;%</span></span>
+<span id="cb55-4"><a href="http://localhost:5879/#cb55-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Country, Year) <span class="sc">%&gt;%</span></span>
+<span id="cb55-5"><a href="http://localhost:5879/#cb55-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Os nomes das variáveis são renomeados para facilitar a leitura:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="http://localhost:5879/#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(crime_ts) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"country"</span>, <span class="st">"year"</span>, <span class="st">"burglary"</span>, <span class="st">"theft"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Apenas países que possuem dados completos de 2003 a 2022 são mantidos:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="http://localhost:5879/#cb57-1" aria-hidden="true" tabindex="-1"></a>years_needed <span class="ot">&lt;-</span> <span class="dv">2003</span><span class="sc">:</span><span class="dv">2022</span></span>
+<span id="cb57-2"><a href="http://localhost:5879/#cb57-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-3"><a href="http://localhost:5879/#cb57-3" aria-hidden="true" tabindex="-1"></a>crime_ts <span class="ot">&lt;-</span> crime_ts <span class="sc">%&gt;%</span></span>
+<span id="cb57-4"><a href="http://localhost:5879/#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(country) <span class="sc">%&gt;%</span></span>
+<span id="cb57-5"><a href="http://localhost:5879/#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">all</span>(years_needed <span class="sc">%in%</span> year)) <span class="sc">%&gt;%</span></span>
+<span id="cb57-6"><a href="http://localhost:5879/#cb57-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Alguns nomes de países são ajustados para garantir uniformidade:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="http://localhost:5879/#cb58-1" aria-hidden="true" tabindex="-1"></a>crime_ts <span class="ot">&lt;-</span> crime_ts <span class="sc">%&gt;%</span></span>
+<span id="cb58-2"><a href="http://localhost:5879/#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">country =</span> <span class="fu">case_when</span>(</span>
+<span id="cb58-3"><a href="http://localhost:5879/#cb58-3" aria-hidden="true" tabindex="-1"></a>    country <span class="sc">==</span> <span class="st">"Netherlands (Kingdom of the)"</span> <span class="sc">~</span> <span class="st">"Netherlands"</span>,</span>
+<span id="cb58-4"><a href="http://localhost:5879/#cb58-4" aria-hidden="true" tabindex="-1"></a>    country <span class="sc">==</span> <span class="st">"Republic of Korea"</span> <span class="sc">~</span> <span class="st">"South Korea"</span>,</span>
+<span id="cb58-5"><a href="http://localhost:5879/#cb58-5" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> country</span>
+<span id="cb58-6"><a href="http://localhost:5879/#cb58-6" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="dados-econômicos" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="dados-econômicos"><span class="header-section-number">3.2.2</span> Dados econômicos<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#dados-econ%C3%B4micos" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h3>
+<p>Os dados de desemprego e PIB per capita são lidos e integrados ao conjunto de dados de crimes:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="http://localhost:5879/#cb59-1" aria-hidden="true" tabindex="-1"></a>labor_data <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">"./labor_data.csv"</span>, <span class="at">sep =</span> <span class="st">","</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb59-2"><a href="http://localhost:5879/#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">8</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb59-3"><a href="http://localhost:5879/#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">country =</span> <span class="dv">1</span>, <span class="at">year =</span> <span class="dv">2</span>, <span class="at">unemployment_rate =</span> <span class="dv">3</span>)</span>
+<span id="cb59-4"><a href="http://localhost:5879/#cb59-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-5"><a href="http://localhost:5879/#cb59-5" aria-hidden="true" tabindex="-1"></a>crime_ts <span class="ot">&lt;-</span> crime_ts <span class="sc">%&gt;%</span></span>
+<span id="cb59-6"><a href="http://localhost:5879/#cb59-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(labor_data, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"country"</span>, <span class="st">"year"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Da mesma forma, os dados de PIB per capita são adicionados:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="http://localhost:5879/#cb60-1" aria-hidden="true" tabindex="-1"></a>gpc_data <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">"./gpc_data.csv"</span>, <span class="at">sep =</span> <span class="st">","</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb60-2"><a href="http://localhost:5879/#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb60-3"><a href="http://localhost:5879/#cb60-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">country =</span> <span class="dv">1</span>, <span class="at">year =</span> <span class="dv">2</span>, <span class="at">gdp_per_capita =</span> <span class="dv">3</span>)</span>
+<span id="cb60-4"><a href="http://localhost:5879/#cb60-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-5"><a href="http://localhost:5879/#cb60-5" aria-hidden="true" tabindex="-1"></a>crime_ts <span class="ot">&lt;-</span> crime_ts <span class="sc">%&gt;%</span></span>
+<span id="cb60-6"><a href="http://localhost:5879/#cb60-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(gpc_data, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"country"</span>, <span class="st">"year"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Os dados são convertidos para formato numérico e valores ausentes são removidos:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="http://localhost:5879/#cb61-1" aria-hidden="true" tabindex="-1"></a>crime_ts <span class="ot">&lt;-</span> crime_ts <span class="sc">%&gt;%</span></span>
+<span id="cb61-2"><a href="http://localhost:5879/#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(theft, burglary, unemployment_rate, gdp_per_capita) <span class="sc">%&gt;%</span></span>
+<span id="cb61-3"><a href="http://localhost:5879/#cb61-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(year, theft, burglary, unemployment_rate, gdp_per_capita), as.numeric))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="construção-do-painel" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="construção-do-painel"><span class="header-section-number">3.3</span> Construção do painel<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#constru%C3%A7%C3%A3o-do-painel" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h2>
+<p>Para a análise de séries temporais, um painel de dados é criado, incluindo defasagens das variáveis:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="http://localhost:5879/#cb62-1" aria-hidden="true" tabindex="-1"></a>crime_ts <span class="ot">&lt;-</span> crime_ts <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">trend =</span> year <span class="sc">-</span> <span class="fu">min</span>(year), <span class="at">tb_100k =</span> theft <span class="sc">+</span> burglary)</span>
+<span id="cb62-2"><a href="http://localhost:5879/#cb62-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-3"><a href="http://localhost:5879/#cb62-3" aria-hidden="true" tabindex="-1"></a>crime_panel <span class="ot">&lt;-</span> <span class="fu">pdata.frame</span>(crime_ts, <span class="at">index =</span> <span class="fu">c</span>(<span class="st">"country"</span>, <span class="st">"year"</span>))</span>
+<span id="cb62-4"><a href="http://localhost:5879/#cb62-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-5"><a href="http://localhost:5879/#cb62-5" aria-hidden="true" tabindex="-1"></a>crime_panel <span class="ot">&lt;-</span> crime_panel <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
+<span id="cb62-6"><a href="http://localhost:5879/#cb62-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">burglary_lag1 =</span> <span class="fu">lag</span>(burglary, <span class="at">k =</span> <span class="dv">1</span>),</span>
+<span id="cb62-7"><a href="http://localhost:5879/#cb62-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">burglary_lag2 =</span> <span class="fu">lag</span>(burglary, <span class="at">k =</span> <span class="dv">2</span>),</span>
+<span id="cb62-8"><a href="http://localhost:5879/#cb62-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">theft_lag1 =</span> <span class="fu">lag</span>(theft, <span class="at">k =</span> <span class="dv">1</span>),</span>
+<span id="cb62-9"><a href="http://localhost:5879/#cb62-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">theft_lag2 =</span> <span class="fu">lag</span>(theft, <span class="at">k =</span> <span class="dv">2</span>),</span>
+<span id="cb62-10"><a href="http://localhost:5879/#cb62-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">tb_100k_lag1 =</span> <span class="fu">lag</span>(tb_100k, <span class="at">k =</span> <span class="dv">1</span>),</span>
+<span id="cb62-11"><a href="http://localhost:5879/#cb62-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">tb_100k_lag2 =</span> <span class="fu">lag</span>(tb_100k, <span class="at">k =</span> <span class="dv">2</span>),</span>
+<span id="cb62-12"><a href="http://localhost:5879/#cb62-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">unemployment_rate_lag1 =</span> <span class="fu">lag</span>(unemployment_rate, <span class="at">k =</span> <span class="dv">1</span>),</span>
+<span id="cb62-13"><a href="http://localhost:5879/#cb62-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">unemployment_rate_lag2 =</span> <span class="fu">lag</span>(unemployment_rate, <span class="at">k =</span> <span class="dv">2</span>),</span>
+<span id="cb62-14"><a href="http://localhost:5879/#cb62-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">gdp_per_capita_lag1 =</span> <span class="fu">lag</span>(gdp_per_capita, <span class="at">k =</span> <span class="dv">1</span>),</span>
+<span id="cb62-15"><a href="http://localhost:5879/#cb62-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">gdp_per_capita_lag2 =</span> <span class="fu">lag</span>(gdp_per_capita, <span class="at">k =</span> <span class="dv">2</span>)</span>
+<span id="cb62-16"><a href="http://localhost:5879/#cb62-16" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="visualização-dos-dados" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="visualização-dos-dados"><span class="header-section-number">3.4</span> Visualização dos dados<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#visualiza%C3%A7%C3%A3o-dos-dados" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h2>
+<p>Primeiro, o script gera um gráfico de linhas para explorar as tendências temporais do crime:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="http://localhost:5879/#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's plot the data</span></span>
+<span id="cb63-2"><a href="http://localhost:5879/#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(crime_ts, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> tb_100k, <span class="at">group =</span> country, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb63-3"><a href="http://localhost:5879/#cb63-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span>  <span class="co"># Add transparency to avoid clutter</span></span>
+<span id="cb63-4"><a href="http://localhost:5879/#cb63-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb63-5"><a href="http://localhost:5879/#cb63-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Evolução dos Crimes ao Longo do Tempo por País"</span>,</span>
+<span id="cb63-6"><a href="http://localhost:5879/#cb63-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Ano"</span>, </span>
+<span id="cb63-7"><a href="http://localhost:5879/#cb63-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Crimes por 100 mil habitantes"</span>) <span class="sc">+</span></span>
+<span id="cb63-8"><a href="http://localhost:5879/#cb63-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb63-9"><a href="http://localhost:5879/#cb63-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb63-10"><a href="http://localhost:5879/#cb63-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb63-11"><a href="http://localhost:5879/#cb63-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb63-12"><a href="http://localhost:5879/#cb63-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>)</span>
+<span id="cb63-13"><a href="http://localhost:5879/#cb63-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb63-14"><a href="http://localhost:5879/#cb63-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb63-15"><a href="http://localhost:5879/#cb63-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fu">min</span>(crime_ts<span class="sc">$</span>year), <span class="fu">max</span>(crime_ts<span class="sc">$</span>year), <span class="at">by =</span> <span class="dv">2</span>),</span>
+<span id="cb63-16"><a href="http://localhost:5879/#cb63-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb63-17"><a href="http://localhost:5879/#cb63-17" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="./Dois Projetos em Ciência de Dados_files/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Em seguida, observa-se a relação entre desemprego e crime no contexto internacional, com um gráfico de dispersão geral:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="http://localhost:5879/#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(crime_ts, <span class="fu">aes</span>(<span class="at">x =</span> unemployment_rate, <span class="at">y =</span> tb_100k)) <span class="sc">+</span></span>
+<span id="cb64-2"><a href="http://localhost:5879/#cb64-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> country, <span class="at">size =</span> gdp_per_capita), <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb64-3"><a href="http://localhost:5879/#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb64-4"><a href="http://localhost:5879/#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Crimes vs. Taxa de desemprego"</span>,</span>
+<span id="cb64-5"><a href="http://localhost:5879/#cb64-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Taxa de Desemprego (%)"</span>,</span>
+<span id="cb64-6"><a href="http://localhost:5879/#cb64-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Crimes por 100.000 habitantes"</span>,</span>
+<span id="cb64-7"><a href="http://localhost:5879/#cb64-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Fonte: Crime Panel Dataset"</span>) <span class="sc">+</span></span>
+<span id="cb64-8"><a href="http://localhost:5879/#cb64-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb64-9"><a href="http://localhost:5879/#cb64-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"right"</span>,</span>
+<span id="cb64-10"><a href="http://localhost:5879/#cb64-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb64-11"><a href="http://localhost:5879/#cb64-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="./Dois Projetos em Ciência de Dados_files/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Por fim, são feitos gráficos de dispersão para cada país:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="http://localhost:5879/#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(crime_ts, <span class="fu">aes</span>(<span class="at">x =</span> unemployment_rate, <span class="at">y =</span> tb_100k, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb66-2"><a href="http://localhost:5879/#cb66-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb66-3"><a href="http://localhost:5879/#cb66-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">linetype =</span> <span class="st">"solid"</span>, <span class="at">size =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb66-4"><a href="http://localhost:5879/#cb66-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> country, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
+<span id="cb66-5"><a href="http://localhost:5879/#cb66-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Crimes vs. Taxa de desemprego por país"</span>,</span>
+<span id="cb66-6"><a href="http://localhost:5879/#cb66-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Taxa de Desemprego (%)"</span>,</span>
+<span id="cb66-7"><a href="http://localhost:5879/#cb66-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Crimes por 100.000 habitantes"</span>,</span>
+<span id="cb66-8"><a href="http://localhost:5879/#cb66-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"*Cada país possui uma linha de tendência própria"</span>) <span class="sc">+</span></span>
+<span id="cb66-9"><a href="http://localhost:5879/#cb66-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb66-10"><a href="http://localhost:5879/#cb66-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb66-11"><a href="http://localhost:5879/#cb66-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb66-12"><a href="http://localhost:5879/#cb66-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="./Dois Projetos em Ciência de Dados_files/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>São estimados modelos de regressão para entender os fatores que influenciam o crime, adicionando variáveis de controle e lags nos diferentes modelos:</p>
+<p>(Além da exposição dos resultados, são feitos também testes de autocorrelação serial)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="http://localhost:5879/#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb69-2"><a href="http://localhost:5879/#cb69-2" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">plm</span>(tb_100k <span class="sc">~</span> unemployment_rate, <span class="at">data =</span> crime_panel, <span class="at">model =</span> <span class="st">"within"</span>, <span class="at">index =</span> <span class="fu">c</span>(<span class="st">"country"</span>, <span class="st">"year"</span>))</span>
+<span id="cb69-3"><a href="http://localhost:5879/#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Oneway (individual) effect Within Model
+
+Call:
+plm(formula = tb_100k ~ unemployment_rate, data = crime_panel, 
+    model = "within", index = c("country", "year"))
+
+Unbalanced Panel: n = 29, T = 6-20, N = 529
+
+Residuals:
+      Min.    1st Qu.     Median    3rd Qu.       Max. 
+-2468.4458  -208.9949    -8.2764   219.1247  2734.3402 
+
+Coefficients:
+                  Estimate Std. Error t-value  Pr(&gt;|t|)    
+unemployment_rate  52.7775     8.9811  5.8765 7.667e-09 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Total Sum of Squares:    175190000
+Residual Sum of Squares: 163850000
+R-Squared:      0.064726
+Adj. R-Squared: 0.010371
+F-statistic: 34.5335 on 1 and 499 DF, p-value: 7.6672e-09</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="http://localhost:5879/#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwartest</span>(model1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Wooldridge's test for serial correlation in FE panels
+
+data:  model1
+F = 1371.3, df1 = 1, df2 = 498, p-value &lt; 2.2e-16
+alternative hypothesis: serial correlation</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="http://localhost:5879/#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb73-2"><a href="http://localhost:5879/#cb73-2" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">plm</span>(tb_100k <span class="sc">~</span> unemployment_rate <span class="sc">+</span> gdp_per_capita, <span class="at">data =</span> crime_panel, <span class="at">model =</span> <span class="st">"within"</span>, <span class="at">index =</span> <span class="fu">c</span>(<span class="st">"country"</span>, <span class="st">"year"</span>))</span>
+<span id="cb73-3"><a href="http://localhost:5879/#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Oneway (individual) effect Within Model
+
+Call:
+plm(formula = tb_100k ~ unemployment_rate + gdp_per_capita, data = crime_panel, 
+    model = "within", index = c("country", "year"))
+
+Unbalanced Panel: n = 29, T = 6-20, N = 529
+
+Residuals:
+     Min.   1st Qu.    Median   3rd Qu.      Max. 
+-2339.960  -221.402   -10.703   189.844  2593.777 
+
+Coefficients:
+                    Estimate Std. Error t-value  Pr(&gt;|t|)    
+unemployment_rate 19.5068617  9.4767050  2.0584   0.04007 *  
+gdp_per_capita    -0.0316079  0.0040205 -7.8618 2.362e-14 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Total Sum of Squares:    175190000
+Residual Sum of Squares: 145760000
+R-Squared:      0.16799
+Adj. R-Squared: 0.11787
+F-statistic: 50.2745 on 2 and 498 DF, p-value: &lt; 2.22e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="http://localhost:5879/#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwartest</span>(model2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Wooldridge's test for serial correlation in FE panels
+
+data:  model2
+F = 1122.8, df1 = 1, df2 = 498, p-value &lt; 2.2e-16
+alternative hypothesis: serial correlation</code></pre>
+</div>
+</div>
+</section>
+<section id="conclusão-1" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="conclusão-1"><span class="header-section-number">3.5</span> Conclusão<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="http://localhost:5879/#conclus%C3%A3o-1" style="font: 1em / 1 anchorjs-icons; margin-left: 0.1875em; padding-right: 0.1875em; padding-left: 0.1875em;"></a></h2>
+<p>Foram explicadas as etapas do script crime_time_series.R, cobrindo desde a limpeza dos dados até a modelagem econométrica. A análise sugere que fatores econômicos como desemprego e PIB per capita podem ter impacto na criminalidade, a depender do modelo utilizado.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+
+<script>window.backupDefine = window.define; window.define = undefined;</script>
+<script type="text/javascript" src="./Dois Projetos em Ciência de Dados_files/quarto-preview.js.download"></script>
+<script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+<script type="text/javascript">
+  const options = {
+    origin: "http://localhost:5879",
+    search: "?viewer_pane=1&amp;capabilities=1&amp;host=http%3A%2F%2F127.0.0.1%3A30429",
+    inputFile: "C:\Users\lucas\OneDrive\ambienteDeTrabalho\UFMG\7_semestre\Ciências de Dados\relatorio_script_modificado.qmd",
+    isPresentation: false
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    window.QuartoPreview.init(options);
+  });
+</script>
+<div><div dir="ltr" class="fui-FluentProvider fui-FluentProviderr0 ___jdtuxv0 f19n0e5 fxugw4r f1o700av fk6fouc fkhj508 figsok6 f1i3iumi"></div></div><iframe id="7glHD2g7" frameborder="0" src="./Dois Projetos em Ciência de Dados_files/translateSandbox.html" style="width: 0px; height: 0px; display: none;"></iframe><i tabindex="0" role="none" data-tabster-dummy="" aria-hidden="true" style="position: fixed; height: 1px; width: 1px; opacity: 0.001; z-index: -1; content-visibility: hidden; top: 0px; left: 0px;"></i></body><editor-card style="position:absolute;top:0px;left:0px;z-index:auto;display: block !important"><div dir="ltr" style="all: initial;"><div style="color-scheme: initial; forced-color-adjust: initial; mask: initial; math-depth: initial; position: absolute; position-anchor: initial; text-size-adjust: initial; appearance: initial; color: initial; font: initial; font-palette: initial; font-synthesis: initial; position-area: initial; text-orientation: initial; text-rendering: initial; text-spacing-trim: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; anchor-name: initial; anchor-scope: initial; animation-composition: initial; animation: initial; app-region: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-decoration-break: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; field-sizing: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; interpolate-size: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask-type: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position-try: initial; position-visibility: initial; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-align: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-color: initial; scrollbar-gutter: initial; scrollbar-width: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; text-wrap: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-class: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; white-space-collapse: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://gpaiobkfhnonedkhhfjpmhdalgeoebfa/fonts/fabric-icons.css"><div style="all: initial;"><template shadowrootmode="open"></template></div></div><div style="color-scheme: initial; forced-color-adjust: initial; mask: initial; math-depth: initial; position: absolute; position-anchor: initial; text-size-adjust: initial; appearance: initial; color: initial; font: initial; font-palette: initial; font-synthesis: initial; position-area: initial; text-orientation: initial; text-rendering: initial; text-spacing-trim: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; anchor-name: initial; anchor-scope: initial; animation-composition: initial; animation: initial; app-region: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-decoration-break: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; field-sizing: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; interpolate-size: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask-type: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position-try: initial; position-visibility: initial; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-align: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-color: initial; scrollbar-gutter: initial; scrollbar-width: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; text-wrap: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-class: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; white-space-collapse: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://gpaiobkfhnonedkhhfjpmhdalgeoebfa/fonts/fabric-icons.css"></div><div id="editorNotificationContainer" style="color-scheme: initial; forced-color-adjust: initial; mask: initial; math-depth: initial; position: fixed; position-anchor: initial; text-size-adjust: initial; appearance: initial; color: initial; font: initial; font-palette: initial; font-synthesis: initial; position-area: initial; text-orientation: initial; text-rendering: initial; text-spacing-trim: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; anchor-name: initial; anchor-scope: initial; animation-composition: initial; animation: initial; app-region: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; bottom: 0px; box-decoration-break: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: flex; dominant-baseline: initial; empty-cells: initial; field-sizing: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-direction: column-reverse; flex-wrap: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; interpolate-size: initial; isolation: initial; left: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: 1em; margin-inline: initial; marker: initial; mask-type: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position-try: initial; position-visibility: initial; quotes: initial; r: initial; resize: initial; right: 0px; rotate: initial; ruby-align: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-color: initial; scrollbar-gutter: initial; scrollbar-width: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; text-wrap: initial; timeline-scope: initial; top: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-class: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; white-space-collapse: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"></div></div></editor-card></html>
